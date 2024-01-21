@@ -10,12 +10,8 @@ public class Roots {
 
     public static void calculate_roots(double a, double b, double c)
     {
-        double q, r, x, y;
-
+        double q;
         q = b*b - 4*a*c;
-        x = b*b;
-        y = 4*a*c;
-        r = x - y;
 
         if (out_of_Range(a, 0, 100)|| out_of_Range(b, 0, 100)||out_of_Range(c, 0, 100)) {
             roots = Root_Types.ERROR;
