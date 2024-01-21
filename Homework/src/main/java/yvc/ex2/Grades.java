@@ -1,6 +1,6 @@
-package yvc;
+package yvc.ex2;
 
-public class Ex2 {
+public class Grades {
     public String getGrade(int grade) {
         String res;
 
