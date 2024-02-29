@@ -1,0 +1,150 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > Roots</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">yvc.ex2</a>
+</div>
+
+<h1>Coverage Summary for Class: Roots (yvc.ex2)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Roots</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/13)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package yvc.ex2;
+&nbsp;
+<b class="nc">&nbsp;public class Roots {</b>
+&nbsp;    private static Root_Types roots;
+&nbsp;
+&nbsp;    private static boolean out_of_Range(double x, double a, double b) {
+<b class="nc">&nbsp;        return (x &lt; a || x &gt; b);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;    public static void calculate_roots(double a, double b, double c)
+&nbsp;    {
+&nbsp;        double q;
+<b class="nc">&nbsp;        q = b*b - 4*a*c;</b>
+&nbsp;
+<b class="nc">&nbsp;        if (out_of_Range(a, 0, 100)|| out_of_Range(b, 0, 100)||out_of_Range(c, 0, 100)) {</b>
+<b class="nc">&nbsp;            roots = Root_Types.ERROR;</b>
+&nbsp;            return;
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        if (a != 0) {</b>
+<b class="nc">&nbsp;            if(q&gt;0 )</b>
+&nbsp;            {
+<b class="nc">&nbsp;                roots = Root_Types.Two_roots;</b>
+&nbsp;            }
+<b class="nc">&nbsp;            else if(q==0)</b>
+&nbsp;            {
+&nbsp;                // the equation has exactly one root
+<b class="nc">&nbsp;                roots = Root_Types.Equal_roots;</b>
+&nbsp;            }
+&nbsp;            else
+&nbsp;            {
+&nbsp;                // the equation has no roots if b^2 &lt; 4ac
+<b class="nc">&nbsp;                roots = Root_Types.No_roots;</b>
+&nbsp;            }
+&nbsp;        }
+&nbsp;        else {
+<b class="nc">&nbsp;            roots = Root_Types.Not_quadratic;</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    public static Root_Types root_types()
+&nbsp;    {
+<b class="nc">&nbsp;        return roots;</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-02-29 19:29</div>
+</div>
+</body>
+</html>
