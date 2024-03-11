@@ -19,12 +19,11 @@ public class WeakClass {
     }
 
     public static int WeakMethod3(int a, int b) {
-        if (a>7) {
-            return a+b;
+        if (a == 0 || b > 1)
+        {
+            a += 3;
         }
-        else if (a<7) {
-            return a-b;
-        }
+        a += 1;
 
         return a/b;
     }
